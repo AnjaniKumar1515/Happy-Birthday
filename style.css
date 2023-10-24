@@ -1,53 +1,79 @@
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+    height: 100vh; /* to ensure it covers the full viewport height */
+    position: relative;
 }
 
 .video {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
-    z-index: -1;
+
 }
 
 .content {
-    z-index: 2;  /* Increase the z-index value so it's always on top of the video */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     position: absolute;
-    top: 0;
-    left: 0;
+    right: 5%;
+    top: 0%;
     width: 100%;
     height: 100%;
-}
-
-.content img {
-    max-width: 100%; /* This will ensure the image doesn't exceed its parent container size */
-    max-height: 100%;
-    width: 35vw;
-    height: 50vh;
-    position: absolute;
-    right: 0;
-    top: 10%;
+    background: transparent;  /* Add this line */ 
 }
 .happy-birthday {
     font-family: 'Dancing Script', cursive;
-    font-size: 6.8rem; /* Adjust size as needed */
-    color: #FFD700; /* Gold color to match the golden hour theme */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 30%;
-    right: 5%;
-  
-    z-index: 2; /* Ensure it's on top of the video */
+    font-size: 6.8rem; 
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FF8C00, 0 0 40px #FF8C00;
+}
+.parallax-container {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.parallax {
+    height: 120vh;
+    width: 100vw;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.1); /* A little zoom for the parallax effect */
+    
+}
+img{
+    width: 100%;
+}
+
+.message {
+    width: 45%;
+    background-color: rgba(255, 239, 213, 0.9); /* Peachy background for a warm touch */
+    padding: 25px;
+    
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+.message p, .message h1 {
+    font-family: 'Dancing Script', cursive; 
+    color: #333;
+    margin: 0 0 20px;
+    line-height: 1.5;
+
+}
+.message p{
+    font-size: 1.2rem;
+    font-family:'Times New Roman', Times, serif
+}
+.message h1 {
+    font-size: 2.5rem;
+    color: #FF6347; /* Tomato red for emphasis and warmth */
+    text-align: center;
+    margin: 20px 0;
 }
